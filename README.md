@@ -36,14 +36,15 @@ To run Finanship locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Exoutia/finanship.git
    cd finanship
    ```
 
 2. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pipenv shell
+   pipenv sync
    ```
 
 3. Set up the database:
