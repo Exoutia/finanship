@@ -1,10 +1,12 @@
-<!-- accounts/templates/base.html -->
+<!-- accounts/templates/bame.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Finanship{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/style.css' %}">
 </head>
 <body>
     <header>
