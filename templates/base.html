@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% block title %}
+      Base file title loading
+      {% endblock %}
+    </title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+     <ul>
+        {% if user.is_authenticated %}
+        <li>Records</li>        
+        <li>information</li>        
+        <li><a href={% url 'account_logout' %}>Logout</a></li>
+        {% else %}
+        <li><a href={% url 'account_login' %}>Login</a></li>
+        <li><a href={% url 'account_signup' %}>Login</a></li>
+        {% endif %}
+        
+      </ul>
+
+    </nav>
+      {% block content %}
+      {% endblock content %}
+  </body>
+</html>
